@@ -1,0 +1,36 @@
+# ─── SISTEMA (macOS & Windows) ───────────────────────────────
+.DS_Store
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+Icon?
+$RECYCLE.BIN/
+
+# ─── NODE / DEPENDENCIAS (si usas npm/yarn) ───────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── COMPILACIÓN SCSS/CSS (si generas CSS desde SCSS) ─────────────────────
+*.css.map
+*.sass-cache/
+*.scssc
+
+# ─── COMPILADOS / DIST / BUILD ───────────────────────────────────────────
+dist/
+build/
+.tmp/
+
+# ─── EDITORES / IDEs ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── VARIOS ──────────────────────────────────────────────────────────────
+*.log
+*.bak
+*.zip
+*.tar.gz
