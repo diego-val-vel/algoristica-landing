@@ -69,6 +69,7 @@
 
 
     // Header carousel
+    $(document).ready(function() {
     $(".header-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1500,
@@ -80,6 +81,7 @@
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
+        });
     });
 
 

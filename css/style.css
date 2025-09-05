@@ -265,6 +265,7 @@
 
 .service-item * {
     transition: .5s;
+     
 }
 
 .service-item:hover * {
