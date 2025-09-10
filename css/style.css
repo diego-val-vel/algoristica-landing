@@ -5,6 +5,11 @@
     --dark: #181d38;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
+
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -433,3 +438,4 @@
     padding-right: 0;
     border-right: none;
 }
+
