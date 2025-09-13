@@ -439,3 +439,41 @@
     border-right: none;
 }
 
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-family: 'Changa', sans-serif !important;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  height: 100%;
+}
+
+.logo-container .logo-text {
+  font-family: 'Changa', sans-serif !important;
+  font-weight: 600;
+}
+
+.logo-container .cursor {
+  display: inline-block;
+  background-color: #808080;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+.navbar-brand .logo-container { margin: 0; padding: 0; }
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
