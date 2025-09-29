@@ -96,3 +96,15 @@
     });
 
 })(jQuery);
+
+// Navbar, aumentar opacidad al hacer scroll.
+(function () {
+    var nav = document.querySelector('.navbar.navbar-glass');
+    if (!nav) return;
+    function onScroll() {
+        if (window.scrollY > 24) { nav.classList.add('navbar-scrolled'); }
+        else { nav.classList.remove('navbar-scrolled'); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
