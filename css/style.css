@@ -6,9 +6,8 @@
 }
 
 .no-wrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }
-
 
 .fw-medium {
     font-weight: 600 !important;
@@ -26,7 +25,6 @@
     z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -40,7 +38,6 @@
     visibility: visible;
     opacity: 1;
 }
-
 
 /*** Button ***/
 .btn {
@@ -80,7 +77,6 @@
     border-radius: 0px;
 }
 
-
 /*** Navbar ***/
 .navbar .dropdown-toggle::after {
     border: none;
@@ -106,7 +102,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -155,14 +151,13 @@
     }
 }
 
-
 /*** Header carousel ***/
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -212,10 +207,9 @@
     background: rgba(15, 23, 43, .7);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
-
 
 /*** Section Title ***/
 .section-title {
@@ -256,7 +250,6 @@
     left: 0;
 }
 
-
 /*** Service ***/
 .service-item {
     background: var(--light);
@@ -270,13 +263,12 @@
 
 .service-item * {
     transition: .5s;
-     
+
 }
 
 .service-item:hover * {
     color: var(--light) !important;
 }
-
 
 /*** Categories & Courses ***/
 .category img,
@@ -289,7 +281,6 @@
     transform: scale(1.1);
 }
 
-
 /*** Team ***/
 .team-item img {
     transition: .5s;
@@ -298,7 +289,6 @@
 .team-item:hover img {
     transform: scale(1.1);
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
@@ -324,6 +314,7 @@
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -331,6 +322,7 @@
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -371,7 +363,6 @@
     background: var(--primary);
     border-color: var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -440,41 +431,119 @@
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  font-family: 'Changa', sans-serif !important;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1;
-  height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Changa', sans-serif !important;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    height: 100%;
 }
 
 .logo-container .logo-text {
-  font-family: 'Changa', sans-serif !important;
-  color: #5B87FF;
-  font-weight: 600;
+    font-family: 'Changa', sans-serif !important;
+    color: #5B87FF;
+    font-weight: 600;
 }
 
 .logo-container .cursor {
-  display: inline-block;
-  background-color: #808080;
-  width: 2px;
-  height: 1em;
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
+    display: inline-block;
+    background-color: #808080;
+    width: 2px;
+    height: 1em;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
 }
 
-.navbar-brand .logo-container { margin: 0; padding: 0; }
+.navbar-brand .logo-container {
+    margin: 0;
+    padding: 0;
+}
 
 .navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menú bar */
+:root {
+    --nav-rgb: 0, 0, 0;
+    --nav-alpha: 0.95;
+    --nav-alpha-scrolled: 0.70;
+    --brand: #FFFFFF;
+    --nav-blur: 8px;
+    --nav-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Fondo semitransparente + blur */
+.navbar-glass {
+    background-color: rgba(var(--nav-rgb), var(--nav-alpha));
+    -webkit-backdrop-filter: saturate(180%) blur(var(--nav-blur));
+    backdrop-filter: saturate(180%) blur(var(--nav-blur));
+    border-bottom: 1px solid var(--nav-border);
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* BASE: texto BLANCO */
+.navbar-glass .navbar-brand,
+.navbar-glass .navbar-brand .logo-text {
+    color: #5B87FF;
+}
+
+/* Con SCROLL: baja opacidad y cambia textos a AZUL marca */
+.navbar-glass.navbar-scrolled {
+    --nav-alpha: var(--nav-alpha-scrolled);
+    --nav-border: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-glass.navbar-scrolled .navbar-brand,
+.navbar-glass.navbar-scrolled .navbar-brand .logo-text {
+    color: var(--brand);
+}
+
+/* Toggler (hamburguesa) en fondo oscuro */
+.navbar-glass .navbar-toggler {
+    border-color: rgba(255, 255, 255, .25);
+}
+
+.navbar-glass .navbar-toggler-icon {
+    filter: invert(1) grayscale(100%);
+}
+
+/* Dropdown (opcional, si lo usas sobre fondo oscuro) */
+.navbar-glass .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.90);
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+.navbar-glass .dropdown-item {
+    color: #eee;
+}
+
+.navbar-glass .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+/* Footer: "algorística" con fuente Changa */
+.footer .copyright span.border-bottom {
+    font-family: 'Changa', sans-serif !important;
+    font-weight: 600;
 }
