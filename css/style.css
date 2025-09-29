@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06BBCC;
-    --light: #F0FBFC;
+    --primary: #5B87FF;
+    --light: #eaedfa;
     --dark: #181d38;
 }
 
@@ -254,6 +254,7 @@
 .service-item {
     background: var(--light);
     transition: .5s;
+    border-radius: 12px;
 }
 
 .service-item:hover {
@@ -271,9 +272,16 @@
 }
 
 /*** Categories & Courses ***/
+
+
+.course-item.bg-light {
+  background-color: rgba(176, 200, 255, 0.2) !important;
+}
+
 .category img,
 .course-item img {
     transition: .5s;
+    
 }
 
 .category a:hover img,
@@ -282,6 +290,11 @@
 }
 
 /*** Team ***/
+
+.team-item.bg-light {
+  background-color: rgba(176, 200, 255, 0.2) !important;
+}
+
 .team-item img {
     transition: .5s;
 }
