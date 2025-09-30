@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -41,6 +42,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border-radius: 4px;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -508,6 +510,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 .img-thumbnail {
   padding: 0.25rem;
@@ -3153,7 +3156,7 @@ fieldset:disabled .btn {
 .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 0.8rem;
 }
 .fade {
   transition: opacity 0.15s linear;
@@ -6853,6 +6856,7 @@ fieldset:disabled .btn {
 }
 .bg-white {
   background-color: #fff !important;
+  border-radius: 4px;
 }
 .bg-transparent {
   background-color: rgba(0, 0, 0, 0) !important;
