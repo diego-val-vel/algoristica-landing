@@ -74,7 +74,7 @@
     align-items: center;
     justify-content: center;
     font-weight: normal;
-    border-radius: 0px;
+    border-radius: 3px;
 }
 
 /*** Navbar ***/
@@ -276,6 +276,7 @@
 
 .course-item.bg-light {
   background-color: rgba(176, 200, 255, 0.2) !important;
+  border-radius: 4px;
 }
 
 .category img,
@@ -519,6 +520,7 @@
     color: #5B87FF;
 }
 
+
 /* Con SCROLL: baja opacidad y cambia textos a AZUL marca */
 .navbar-glass.navbar-scrolled {
     --nav-alpha: var(--nav-alpha-scrolled);
@@ -536,8 +538,16 @@
     border-color: rgba(255, 255, 255, .25);
 }
 
-.navbar-glass .navbar-toggler-icon {
-    filter: invert(1) grayscale(100%);
+/* Eliminar borde y fondo del botón hamburguesa */
+.navbar-toggler {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important; /* elimina el glow al hacer clic */
+}
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,37,102,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Dropdown (opcional, si lo usas sobre fondo oscuro) */
@@ -560,3 +570,71 @@
     font-family: 'Changa', sans-serif !important;
     font-weight: 600;
 }
+
+/* Botón WhatsApp personalizado */
+.navbar .btn.btn-primary {
+  background-color: #5B87FF !important; 
+  border-color: #5B87FF !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover: azul fuerte */
+.navbar .btn.btn-primary:hover {
+  background-color: #002566 !important;
+  border-color: #002566 !important;
+  color: #fff !important;
+}
+
+/* Active y Focus: también azul fuerte */
+.navbar .btn.btn-primary:focus,
+.navbar .btn.btn-primary:active {
+  background-color: #002566 !important;
+  border-color: #002566 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Espaciado de enlaces en la navbar glass */
+.navbar-glass .navbar-nav .nav-link {
+  margin: 0 15px;        
+  padding: 20px 10px;   
+  color: #fff;           
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-glass .navbar-nav .nav-link:hover,
+.navbar-glass .navbar-nav .nav-link.active {
+  color: #5B87FF; 
+}
+
+/* Botón Back-to-Top */
+.back-to-top {
+  background-color: #5B87FF !important; 
+  border: 3px solid #B0C8FF !important; 
+  color: #fff !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-radius: 8px;
+  box-shadow: none !important; 
+  outline: none !important;   
+}
+
+.back-to-top:hover,
+.back-to-top:active {
+  background-color: #002566 !important; 
+  border-color: #B0C8FF !important;    
+  color: #fff !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.back-to-top:focus {
+  background-color: #002566 !important; 
+  border-color: #B0C8FF !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
