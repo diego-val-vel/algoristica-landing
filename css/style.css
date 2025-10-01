@@ -599,12 +599,13 @@
 /* Espaciado de enlaces en la navbar glass */
 .navbar-glass .navbar-nav .nav-link {
   margin: 0 15px;        
-  padding: 20px 10px;   
+  padding: .75rem 1rem; /* usa unidades relativas de Bootstrap */
   color: #fff;           
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
+
 
 .navbar-glass .navbar-nav .nav-link:hover,
 .navbar-glass .navbar-nav .nav-link.active {
@@ -638,3 +639,17 @@
   outline: none !important;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-glass {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .navbar-glass .navbar-brand {
+    height: 90px; /* en vez de 75px */
+  }
+
+  .navbar-glass .navbar-toggler {
+    padding: 14px; /* hace más grande el botón hamburguesa */
+  }
+}

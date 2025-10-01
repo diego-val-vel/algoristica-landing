@@ -42,7 +42,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  border-radius: 4px;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -510,7 +509,6 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
 }
 .img-thumbnail {
   padding: 0.25rem;
